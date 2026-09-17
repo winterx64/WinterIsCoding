@@ -2,7 +2,7 @@
     "name": "winteriscoding",
     "displayName": "WinterIsCoding",
     "description": "A Cold theme for the people who like winter",
-    "version": "2.4.0",
+    "version": "2.4.1",
     "publisher": "winterx64",
     "repository": {
         "type": "git",
@@ -82,6 +82,6 @@
         ]
     },
     "devDependencies": {
-        "@vscode/vsce": "^3.9.2"
+        "@vscode/vsce": "^4.0.0"
     }
 }
