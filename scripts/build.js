@@ -485,7 +485,7 @@ function generateOledVariant(baseThemePath) {
         delete themeData.colors["editorIndentGuide.activeBackground"];
     }
 
-    // 2. Override with Pure OLED #000000 surfaces & wire borders
+    // 2. Pure OLED #000000 Base Surfaces (Zero Backlight Bleed)
     themeData.colors["editor.background"] = "#000000";
     themeData.colors["editorGutter.background"] = "#000000";
     themeData.colors["sideBar.background"] = "#000000";
@@ -497,45 +497,168 @@ function generateOledVariant(baseThemePath) {
     themeData.colors["tab.inactiveBackground"] = "#000000";
     themeData.colors["tab.activeBackground"] = "#0a0a0a";
     themeData.colors["panel.background"] = "#000000";
+    themeData.colors["terminal.background"] = "#000000";
+    themeData.colors["breadcrumb.background"] = "#000000";
+    themeData.colors["minimap.background"] = "#000000";
+    themeData.colors["editorGroup.emptyBackground"] = "#000000";
     themeData.colors["editorStickyScroll.background"] = "#000000";
     themeData.colors["commandCenter.background"] = "#000000";
+
+    // 3. Tiered Floating & Elevated Surfaces
+    // Tier 1: Deep floating popups (#050505)
+    themeData.colors["quickInput.background"] = "#050505";
+    themeData.colors["editorHoverWidget.background"] = "#050505";
+    themeData.colors["editorHoverWidget.statusBarBackground"] = "#000000";
     themeData.colors["inlineChat.background"] = "#050505";
+    themeData.colors["peekViewEditor.background"] = "#050505";
+    themeData.colors["peekViewEditorGutter.background"] = "#050505";
+
+    // Tier 2: Secondary / Structural panels (#080808)
     themeData.colors["chat.requestBackground"] = "#080808";
-    themeData.colors["textCodeBlock.background"] = "#0a0a0a";
-    themeData.colors["textPreformat.background"] = "#0a0a0a";
-    themeData.colors["keybindingLabel.background"] = "#0a0a0a";
+    themeData.colors["multiDiffEditor.headerBackground"] = "#080808";
+    themeData.colors["multiDiffEditor.background"] = "#000000";
     themeData.colors["keybindingTable.headerBackground"] = "#080808";
     themeData.colors["keybindingTable.rowsBackground"] = "#000000";
+    themeData.colors["peekViewResult.background"] = "#080808";
+
+    // Tier 3: Primary elevated widgets & form elements (#0a0a0a)
+    themeData.colors["input.background"] = "#0a0a0a";
+    themeData.colors["dropdown.background"] = "#0a0a0a";
+    themeData.colors["dropdown.listBackground"] = "#0a0a0a";
+    themeData.colors["checkbox.background"] = "#0a0a0a";
+    themeData.colors["editorWidget.background"] = "#0a0a0a";
+    themeData.colors["editorSuggestWidget.background"] = "#0a0a0a";
+    themeData.colors["debugToolBar.background"] = "#0a0a0a";
+    themeData.colors["debugExceptionWidget.background"] = "#0a0a0a";
+    themeData.colors["notifications.background"] = "#0a0a0a";
+    themeData.colors["editorActionList.background"] = "#0a0a0a";
+    themeData.colors["menu.background"] = "#0a0a0a";
+    themeData.colors["peekViewTitle.background"] = "#0a0a0a";
+    themeData.colors["textCodeBlock.background"] = "#0a0a0a";
+    themeData.colors["textPreformat.background"] = "#0a0a0a";
+    themeData.colors["textBlockQuote.background"] = "#0a0a0a";
+    themeData.colors["banner.background"] = "#0a0a0a";
+    themeData.colors["keybindingLabel.background"] = "#0a0a0a";
     themeData.colors["editorInlayHint.background"] = "#0a0a0a";
     themeData.colors["editorInlayHint.typeBackground"] = "#0a0a0a";
     themeData.colors["editorInlayHint.parameterBackground"] = "#0a0a0a";
-    themeData.colors["input.background"] = "#0a0a0a";
-    themeData.colors["quickInput.background"] = "#050505";
-    themeData.colors["multiDiffEditor.headerBackground"] = "#080808";
-    themeData.colors["multiDiffEditor.background"] = "#000000";
+    themeData.colors["listFilterWidget.background"] = "#0a0a0a";
 
+    // Tier 4: Intermediate notification header (#0e0e0e)
+    themeData.colors["notificationCenterHeader.background"] = "#0e0e0e";
+
+    // Tier 5: Smooth Hover & Active States (#141414)
+    themeData.colors["tab.hoverBackground"] = "#141414";
+    themeData.colors["list.hoverBackground"] = "#141414";
+    themeData.colors["editorStickyScrollHover.background"] = "#141414";
+    themeData.colors["commandCenter.activeBackground"] = "#141414";
+    themeData.colors["activityBar.activeBackground"] = "#141414";
+
+    // Tier 6: Inactive selections & subtle secondary items
+    themeData.colors["list.inactiveSelectionBackground"] = "#161616";
+    themeData.colors["statusBarItem.hoverBackground"] = "#1a1a1a";
+    themeData.colors["button.secondaryBackground"] = "#1c1c1c";
+    themeData.colors["button.secondaryHoverBackground"] = "#272727";
+    themeData.colors["extensionButton.background"] = "#1c1c1c";
+    themeData.colors["extensionButton.hoverBackground"] = "#272727";
+    themeData.colors["badge.background"] = "#222222";
+    themeData.colors["badge.foreground"] = "#ffffff";
+
+    // 4. Structural Wire Borders (#1c1c1c)
     themeData.colors["sideBar.border"] = "#1c1c1c";
+    themeData.colors["sideBarSectionHeader.border"] = "#1c1c1c";
     themeData.colors["panel.border"] = "#1c1c1c";
     themeData.colors["editorGroup.border"] = "#1c1c1c";
     themeData.colors["editorGroupHeader.tabsBorder"] = "#1c1c1c";
     themeData.colors["tab.border"] = "#1c1c1c";
+    themeData.colors["tab.hoverBorder"] = "#1c1c1c";
     themeData.colors["statusBar.border"] = "#1c1c1c";
     themeData.colors["titleBar.border"] = "#1c1c1c";
+    themeData.colors["activityBar.border"] = "#1c1c1c";
+    themeData.colors["terminal.border"] = "#1c1c1c";
+    themeData.colors["panelSection.border"] = "#1c1c1c";
+    themeData.colors["diffEditor.border"] = "#1c1c1c";
+    themeData.colors["chat.requestBorder"] = "#1c1c1c";
+    themeData.colors["pickerGroup.border"] = "#1c1c1c";
+    themeData.colors["input.border"] = "#1c1c1c";
+    themeData.colors["dropdown.border"] = "#1c1c1c";
+    themeData.colors["checkbox.border"] = "#1c1c1c";
     themeData.colors["editorStickyScroll.border"] = "#1c1c1c";
+    themeData.colors["multiDiffEditor.border"] = "#1c1c1c";
+
+    // 5. Floating Widget Wire Borders (#222222)
     themeData.colors["commandCenter.border"] = "#222222";
     themeData.colors["editorHoverWidget.border"] = "#222222";
-    themeData.colors["editorHoverWidget.background"] = "#050505";
-    themeData.colors["editorHoverWidget.statusBarBackground"] = "#000000";
+    themeData.colors["editorWidget.border"] = "#222222";
+    themeData.colors["editorWidget.resizeBorder"] = "#222222";
+    themeData.colors["editorSuggestWidget.border"] = "#222222";
+    themeData.colors["debugToolBar.border"] = "#222222";
+    themeData.colors["debugExceptionWidget.border"] = "#222222";
+    themeData.colors["notifications.border"] = "#222222";
+    themeData.colors["notificationToast.border"] = "#222222";
+    themeData.colors["notificationCenter.border"] = "#222222";
     themeData.colors["inlineChat.border"] = "#222222";
-    themeData.colors["chat.requestBorder"] = "#1c1c1c";
-    themeData.colors["focusBorder"] = "#818cf8";
+    themeData.colors["menu.border"] = "#222222";
+    themeData.colors["menubar.selectionBorder"] = "#222222";
+    themeData.colors["keybindingLabel.border"] = "#222222";
+    themeData.colors["keybindingLabel.bottomBorder"] = "#222222";
+    themeData.colors["tree.indentGuidesStroke"] = "#222222";
 
+    // 6. Indigo Accent & Active States
+    themeData.colors["focusBorder"] = "#818cf8";
+    themeData.colors["tab.activeBorder"] = "#6366f1";
+    themeData.colors["activityBar.activeBorder"] = "#6366f1";
+    themeData.colors["activityBarTop.activeBorder"] = "#6366f1";
+    themeData.colors["editorLineNumber.activeForeground"] = "#818cf8";
+    themeData.colors["list.activeSelectionBackground"] = "#6366f133";
+    themeData.colors["list.activeSelectionForeground"] = "#ffffff";
+    themeData.colors["list.dropBackground"] = "#6366f133";
+    themeData.colors["list.focusBackground"] = "#6366f1";
+    themeData.colors["list.focusForeground"] = "#ffffff";
+    themeData.colors["listFilterWidget.outline"] = "#6366f1";
+    themeData.colors["editor.selectionBackground"] = "#6366f133";
+    themeData.colors["editor.inactiveSelectionBackground"] = "#6366f11a";
+    themeData.colors["editor.selectionHighlightBackground"] = "#6366f122";
+    themeData.colors["editor.selectionHighlightBorder"] = "#00000000";
+    themeData.colors["editor.hoverHighlightBackground"] = "#6366f114";
+    themeData.colors["editor.foldBackground"] = "#6366f114";
+    themeData.colors["editor.lineHighlightBackground"] = "#ffffff08";
+    themeData.colors["editor.lineHighlightBorder"] = "#00000000";
+    themeData.colors["editorIndentGuide.background1"] = "#1c1c1c";
+    themeData.colors["editorIndentGuide.activeBackground1"] = "#6366f177";
+    themeData.colors["minimap.selectionHighlight"] = "#6366f155";
+    themeData.colors["terminal.ansiBlack"] = "#000000";
+    themeData.colors["gitDecoration.conflictingResourceForeground"] = "#ff8484";
+
+    // 7. Peek View Harmonization
+    themeData.colors["peekView.border"] = "#818cf8";
+    themeData.colors["peekViewTitleLabel.foreground"] = "#ffffff";
+    themeData.colors["peekViewTitleDescription.foreground"] = "#94a3b8";
+    themeData.colors["peekViewResult.selectionBackground"] = "#6366f133";
+    themeData.colors["peekViewResult.matchHighlightBackground"] = "#6366f144";
+    themeData.colors["peekViewEditor.matchHighlightBackground"] = "#6366f133";
+
+    // 8. Form Validation
     themeData.colors["inputValidation.errorBackground"] = "#150404";
     themeData.colors["inputValidation.errorBorder"] = "#f48771";
     themeData.colors["inputValidation.warningBackground"] = "#151003";
     themeData.colors["inputValidation.warningBorder"] = "#cca700";
     themeData.colors["inputValidation.infoBackground"] = "#040e15";
     themeData.colors["inputValidation.infoBorder"] = "#75beff";
+
+    // 9. WCAG AA Comment Contrast Enforcement (minimum 4.5:1 against #000000)
+    if (Array.isArray(themeData.tokenColors)) {
+        for (const tokenRule of themeData.tokenColors) {
+            if (tokenRule.scope && (
+                typeof tokenRule.scope === 'string' && tokenRule.scope.includes('comment') ||
+                Array.isArray(tokenRule.scope) && tokenRule.scope.some(s => s.includes('comment'))
+            )) {
+                if (tokenRule.settings && (tokenRule.settings.foreground === '#5a5a5a' || tokenRule.settings.foreground === '#707070')) {
+                    tokenRule.settings.foreground = '#808080';
+                }
+            }
+        }
+    }
 
     fs.writeFileSync(oledPath, JSON.stringify(themeData, null, 4) + '\n', 'utf8');
     console.log('Successfully generated WinterIsCoding Midnight OLED.');
